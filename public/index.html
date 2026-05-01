@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aura | AI Sales Assistant</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  
+  <div class="app-container">
+    
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="logo-icon"><i class="fa-solid fa-bolt"></i></div>
+        <div>
+          <h1>Aura</h1>
+          <span>AI Sales Assistant</span>
+        </div>
+      </div>
+
+      <div class="analytics-card">
+        <h3>Live Analytics</h3>
+        
+        <div class="stat-group">
+          <label>Lead Status</label>
+          <div class="status-badge" id="lead-status">
+            <span class="dot cold"></span>
+            <span id="status-text">Cold Lead</span>
+          </div>
+        </div>
+
+        <div class="stat-group">
+          <label>AI State</label>
+          <div class="tactic-display" id="current-tactic">
+            Observing...
+          </div>
+        </div>
+
+        <div class="features-list">
+          <div class="feature"><i class="fa-solid fa-check"></i> Intent Analysis</div>
+          <div class="feature"><i class="fa-solid fa-check"></i> Scarcity Engine</div>
+          <div class="feature"><i class="fa-solid fa-check"></i> Auto Follow-up</div>
+        </div>
+      </div>
+      
+      <div class="agent-profile">
+        <img src="https://ui-avatars.com/api/?name=Aura&background=10a37f&color=fff" alt="Aura AI" class="avatar">
+        <div class="agent-info">
+          <h4>Aura</h4>
+          <p>Active</p>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Chat Area -->
+    <main class="chat-container">
+      <header class="chat-header">
+        <div class="header-info">
+          <h2>Sales Consultation</h2>
+        </div>
+      </header>
+
+      <div class="chat-box" id="chat-box">
+        <div class="message bot-message">
+          <div class="msg-avatar"><i class="fa-solid fa-robot"></i></div>
+          <div class="msg-content">
+            <p>Hi there! 👋 I'm Aura, your smart sales assistant. How can I help you scale your business today?</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="typing-indicator hidden" id="typing-indicator">
+        <div class="msg-avatar"><i class="fa-solid fa-robot"></i></div>
+        <div class="typing-dots">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+
+      <!-- Action Area for CTA -->
+      <div class="action-area hidden" id="action-area">
+        <div class="cta-card">
+          <div class="cta-icon"><i class="fa-solid fa-gift"></i></div>
+          <div class="cta-text">
+            <h4>Exclusive Offer Unlocked</h4>
+            <p>Secure your 30% discount before it expires.</p>
+          </div>
+          <button class="btn-primary" onclick="alert('Demo: Redirecting to checkout...')">Book Now — ₹699</button>
+        </div>
+      </div>
+
+      <div class="input-area">
+        <div class="input-wrapper">
+          <input type="file" id="file-upload" accept="image/*,.pdf" style="display: none;" onchange="handleFileUpload(event)">
+          <button id="attach-btn" onclick="document.getElementById('file-upload').click()">
+            <i class="fa-solid fa-paperclip"></i>
+          </button>
+          <input type="text" id="user-input" placeholder="Message Aura..." autocomplete="off">
+          <button id="send-btn" onclick="sendMessage()">
+            <i class="fa-solid fa-arrow-up"></i>
+          </button>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

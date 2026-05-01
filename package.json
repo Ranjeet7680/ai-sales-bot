@@ -1,0 +1,22 @@
+{
+  "name": "ai-sales-bot",
+  "version": "1.0.0",
+  "description": "AI Sales Assistant - Smart Persuasion & Automation Bot",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "@google/generative-ai": "^0.2.1",
+    "dotenv": "^16.4.5",
+    "multer": "^1.4.5-lts.1",
+    "pdf-parse": "^1.1.1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs"
+}
